@@ -8,7 +8,7 @@ export function Navbar(){
             <Container > 
                 <Nav className="me-auto "   style={{fontFamily: "Neucha, cursive", fontSize:35}}>
                     <Nav.Link to="/" as={NavLink}   >
-                            Home
+                         Home
                     </Nav.Link>
                     <Nav.Link to="/store" as={NavLink}>
                             Store

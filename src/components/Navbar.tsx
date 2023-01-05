@@ -37,3 +37,4 @@ export function Navbar(){
         </NavBarBs>
     )
 }
+export default Navbar

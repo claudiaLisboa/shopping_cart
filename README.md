@@ -1,4 +1,4 @@
-# `Building a Shopping Cart using ReactJs, TypeScript, and Bootstrap.`
+# `Building a Shopping Cart using ReactJs, TypeScript and Bootstrap.`
 
 ### `For studding proposes`
 

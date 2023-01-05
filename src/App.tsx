@@ -10,7 +10,7 @@ import { Routes, Route} from "react-router-dom"
    return (
      <>
       <Navbar/>
-       <Container className="mb-4" >
+       <Container className="mb-4, text-primary" >
          <Routes>
            <Route path="/" element={<Home />} />
            <Route path="/store" element={<Store />} />

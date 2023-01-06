@@ -54,7 +54,7 @@ export function ShoppingCartProvider({ children }:ShoppingCartProviderProps){
             } else{
                 return currItems.map(item => {
                     if(item.id === id ){
-                        return{...item, quantity:item.quantity +1}
+                        return{...item, quantity:item.quantity - 1}
                     }else{
                         return item
                     }
@@ -62,12 +62,19 @@ export function ShoppingCartProvider({ children }:ShoppingCartProviderProps){
             }
         })
     }
+
+    function removeFromCart(id:number){
+         setCartItems(currItems => {
+            return currItems.filter(item => item.id !== id)
+         })  
+    }
   
 
     return (
-            <ShoppingCartContext.Provider value={{ }}>
+            <ShoppingCartContext.Provider 
+                value={{ getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart }}
+            >
                     {children}
             </ShoppingCartContext.Provider>
     )
-
 }

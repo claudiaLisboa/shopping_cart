@@ -1,4 +1,5 @@
 import { Button, Card } from "react-bootstrap"
+import { useShoppingCart } from "../context/ShoppingCartContext"
 import { formatCurrency } from "../utilities/formatCurrency"
 
 type StoreItemProps={
@@ -11,7 +12,15 @@ type StoreItemProps={
 
 
 export function StoreItem({id, name , price, imgUrl}: StoreItemProps){
-    const quantity = 0;
+    const {
+        getItemQuantity,
+        increaseCartQuantity, 
+        decreaseCartQuantity, 
+        removeFromCart,
+     } = useShoppingCart()
+
+    const quantity = getItemQuantity(id);
+
     return(
         <Card className="h-100">
             <Card.Img 
@@ -27,7 +36,7 @@ export function StoreItem({id, name , price, imgUrl}: StoreItemProps){
                 </Card.Title>
                 <div className="mt-auto">
                     {quantity === 0 ?(
-                        <Button className="w-100">+ Add to Cart</Button>
+                        <Button className="w-100" onClick={() => increaseCartQuantity(id)}>+ Add to Cart</Button>
                     ): <div 
                            className="d-flex align-items-center 
                            flex-column" 
@@ -38,12 +47,11 @@ export function StoreItem({id, name , price, imgUrl}: StoreItemProps){
                                justify-content-center" 
                                style={{ gap:".5rem"}}
                             >
-                               <Button>-</Button>
+                               <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
                                <div>
-                               <span className="fs-3">{quantity}</span> in cart
-
+                                  <span className="fs-3">{quantity}</span> in cart
                                </div>
-                               <Button>+</Button>
+                               <Button onClick={() => removeFromCart(id)}>+</Button>
                             </div>
                             <Button variant="danger" size="sm">Remove</Button>
                         </div>

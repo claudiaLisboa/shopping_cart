@@ -1,6 +1,6 @@
 # `Building a Shopping Cart using ReactJs, TypeScript and Bootstrap.`
 
-### `For studding proposes`
+### `For studying purpose` 
 
 ### `Content viewed with this project :`
 

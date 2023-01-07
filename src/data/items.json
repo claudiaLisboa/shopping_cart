@@ -22,5 +22,18 @@
       "name": "Car",
       "price": 14000,
       "imgUrl": "/imgs/car.jpg"
+    },
+    {
+      "id": 5,
+      "name": "iPhone",
+      "price": 1500,
+      "imgUrl": "/imgs/ipho.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Bag",
+      "price": 200,
+      "imgUrl": "/imgs/bags.jpg"
     }
+
   ]

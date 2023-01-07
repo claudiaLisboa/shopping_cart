@@ -7,7 +7,7 @@ export function Navbar(){
     const {openCart, cartQuantity} = useShoppingCart()
 
     return(
-        <NavBarBs sticky="top" className="bg-white shadow-sm mb-4 ">
+        <NavBarBs sticky="top" className="shadow-sm mb-3" style={{ backgroundColor: "#BBC6C8"}}>  
             <Container > 
                 <Nav className="me-auto "   style={{fontFamily: "Neucha, cursive", fontSize:35}}>
                     <Nav.Link to="/" as={NavLink}   >

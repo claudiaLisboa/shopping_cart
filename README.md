@@ -1,6 +1,6 @@
 # `Building a Shopping Cart using ReactJs, TypeScript and Bootstrap.`
 
-### `For studying purpose` 
+### `Created by Claudia Lisboa - For studying purpose` 
 
 ### `Content viewed with this project :`
 
